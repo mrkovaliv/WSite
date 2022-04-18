@@ -1,10 +1,16 @@
 import React from "react";
 
-import { Wrapper } from "./About.style";
+import { Wrapper, HeaderTitle, Description, Title } from "./About.style";
 
-const About = () => (
-  <Wrapper>
-    About
+import Container from "../Container";
+
+const About = ({ data }) => (
+  <Wrapper color={data.color} backgroundColor={data.backgroundColor}>
+    <Container>
+      <HeaderTitle>Про нас</HeaderTitle>
+      <Title>{data.title}</Title>
+      <Description>{data.description}</Description>
+    </Container>
   </Wrapper>
 );
 

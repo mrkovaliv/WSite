@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
 
 import {
@@ -8,13 +7,16 @@ import {
   About,
   ServicesBlock,
   NoveltyBlock,
+  ReviewsBlock,
 } from "../src/components";
 
-import { selectSettings } from "../src/redux/state/selectors";
+import { selectSettings, selectState } from "../src/redux/state/selectors";
 
-import { Wrapper, Container } from "./App.style";
+import { Wrapper } from "./App.style";
 
 const App = () => {
+  const { header, about, footer, review } = useSelector(selectState);
+
   const {
     color,
     backgroundColor,
@@ -22,18 +24,18 @@ const App = () => {
     showAbout,
     showServices,
     showNovelty,
+    showReviews,
     showFooter,
   } = useSelector(selectSettings);
 
   return (
     <Wrapper color={color} backgroundColor={backgroundColor}>
-      <Container>
-        {showHeader && <Header />}
-        {showAbout && <About />}
-        {showNovelty && <NoveltyBlock />}
-        {showServices && <ServicesBlock />}
-        {showFooter && <Footer />}
-      </Container>
+      {showHeader && <Header data={header} />}
+      {showAbout && <About data={about} />}
+      {showNovelty && <NoveltyBlock />}
+      {showServices && <ServicesBlock />}
+      {showReviews && <ReviewsBlock data={review} />}
+      {showFooter && <Footer data={footer} />}
     </Wrapper>
   );
 };
