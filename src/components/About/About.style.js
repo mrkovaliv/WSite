@@ -13,22 +13,22 @@ export const HeaderTitle = styled.h2`
 `;
 
 export const Title = styled.div`
-  text-align: right;
+
   font-size: 35px;
   line-height: 45px;
   margin-bottom: 20px;
   font-weight: bold;
-  max-width: 500px;
-  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
 `;
 
 export const Description = styled.p`
-  max-width: 500px;
-  margin-left: auto;
+  max-width: 800px;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 24px;
-  text-align: right;
+  text-align: center;
   opacity: 0.9;
 
 `;
