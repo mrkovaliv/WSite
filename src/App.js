@@ -10,6 +10,8 @@ import {
   ReviewsBlock,
   TeamBlock,
   MainBlock,
+  Brands,
+  WorksBlock,
 } from "../src/components";
 
 import { selectSettings, selectState } from "../src/redux/state/selectors";
@@ -17,7 +19,7 @@ import { selectSettings, selectState } from "../src/redux/state/selectors";
 import { Wrapper } from "./App.style";
 
 const App = () => {
-  const { header, about, footer, review, team, main, service } =
+  const { header, about, footer, review, team, main, service, brand, work  } =
     useSelector(selectState);
 
   const {
@@ -26,10 +28,11 @@ const App = () => {
     showHeader,
     showAbout,
     showServices,
-    showNovelty,
+    showBrands,
     showTeam,
     showMain,
     showReviews,
+    showWorks,
     showFooter,
   } = useSelector(selectSettings);
 
@@ -41,6 +44,8 @@ const App = () => {
       {false && <NoveltyBlock />}
       {showTeam && <TeamBlock data={team} />}
       {showServices && <ServicesBlock data={service} />}
+      {showWorks && <WorksBlock data={work} />}
+      {showBrands && <Brands data={brand} />}
       {showReviews && <ReviewsBlock data={review} />}
       {showFooter && <Footer data={footer} />}
     </Wrapper>

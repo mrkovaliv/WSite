@@ -7,7 +7,7 @@ import Container from "../Container";
 const About = ({ data }) => (
   <Wrapper color={data.color} backgroundColor={data.backgroundColor}>
     <Container>
-      <HeaderTitle>Про нас</HeaderTitle>
+      <HeaderTitle>{data.headerTitle}</HeaderTitle>
       <Title>{data.title}</Title>
       <Description>{data.description}</Description>
     </Container>

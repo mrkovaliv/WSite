@@ -7,7 +7,7 @@ import Container from "../Container";
 const ServicesBlock = ({ data }) => (
   <Wrapper color={data.color} backgroundColor={data.backgroundColor}>
     <Container>
-      <HeaderTitle>Наші послуги</HeaderTitle>
+      <HeaderTitle>{data.headerTitle}</HeaderTitle>
       <Description>
         {data?.data?.map((item, idx) => (
           <StyledItem key={idx}>

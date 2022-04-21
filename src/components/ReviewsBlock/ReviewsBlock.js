@@ -8,7 +8,7 @@ import { Wrapper, Title, Reviews } from "./ReviewsBlock.style";
 const ReviewsBlock = ({ data }) => (
   <Wrapper color={data.color} backgroundColor={data.backgroundColor}>
     <Container>
-      <Title>Відгуки <br /> наших клієнтів</Title>
+      <Title>{data.headerTitle}</Title>
       <Reviews>
         {data?.reviews?.map((review, idx) => (
           <ReviewItem

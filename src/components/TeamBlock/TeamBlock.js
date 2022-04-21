@@ -8,7 +8,7 @@ import { Wrapper, Title, Team } from "./TeamBlock.style";
 const TeamBlock = ({ data }) => (
   <Wrapper color={data.color} backgroundColor={data.backgroundColor}>
     <Container>
-      <Title>Наша команда</Title>
+      <Title>{data.headerTitle}</Title>
       <Team>
         {data?.data?.map((item, idx) => (
           <TeamItem

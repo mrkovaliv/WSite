@@ -6,3 +6,5 @@ export { default as NoveltyBlock } from "./NoveltyBlock";
 export { default as ReviewsBlock } from "./ReviewsBlock";
 export { default as TeamBlock } from "./TeamBlock";
 export { default as MainBlock } from "./MainBlock";
+export { default as Brands } from "./Brands";
+export { default as WorksBlock } from "./WorksBlock";
