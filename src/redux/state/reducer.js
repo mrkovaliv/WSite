@@ -1,11 +1,11 @@
 import CONSTANTS from "./constants";
 
-import {INITIAL_STATE } from '../constants';
+import { INITIAL_STATE } from '../constants';
 
-const reducer = (state = INITIAL_STATE, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
-    case CONSTANTS.GET_STATE_VALUES:
-      return state;
+    case CONSTANTS.SET_VALUES:
+      return { ...state, ...action.payload };
     default:
       return state;
   }

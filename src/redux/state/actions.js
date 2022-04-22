@@ -1,4 +1,4 @@
 import CONSTANTS from "./constants";
 
-export const setHeaderValues = (payload) => (dispatch) =>
-  dispatch({ type: CONSTANTS.SET_HEADER_VALUES, payload });
+export const setValues = (payload) => (dispatch) =>
+  dispatch({ type: CONSTANTS.SET_VALUES, payload });

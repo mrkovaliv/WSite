@@ -1,5 +1,5 @@
 const CONSTANTS = {
-  GET_STATE_VALUES: "state/values/get",
+  SET_VALUES: "state/values/set",
 };
 
 export default CONSTANTS;

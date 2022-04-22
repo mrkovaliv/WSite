@@ -1,5 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import {
   Header,
@@ -15,12 +15,23 @@ import {
 } from "../src/components";
 
 import { selectSettings, selectState } from "../src/redux/state/selectors";
+import { setValues } from '../src/redux/state/actions';
 
 import { Wrapper } from "./App.style";
 
 const App = () => {
-  const { header, about, footer, review, team, main, service, brand, work  } =
+  const dispatch = useDispatch();
+  const { header, about, footer, review, team, main, service, brand, work } =
     useSelector(selectState);
+
+  useEffect(() => {
+    fetch("http://localhost:6069/api/wsite/data")
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch(setValues(data));
+        console.log(data);
+      });
+  }, []);
 
   const {
     color,
